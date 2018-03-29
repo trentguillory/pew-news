@@ -4,25 +4,21 @@
   {% include head.html %}
 
   <body>
+      <div id="wrapper">
+          <div id="main">
+              <div class="inner">
+                  {% include header.html %}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+                  <section>
+                      <header class="main">
+                          <h1>{{ page.title }}</h1>
+                      </header>
+                      {{ content }}
+                  </section>
+              </div>
+          </div>
+          {% include sidebar.html %}
       </div>
-    </div>
-
     {% include footer.html %}
-
-    <script async src="{{ '/scripts/main.min.js' | relative_url }}"></script>
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
-      console.log("Service Worker Registered");
-    });
-  }
-  </script>
   </body>
-
 </html>

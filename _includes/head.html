@@ -1,6 +1,8 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/images/favicons/apple-touch-icon.png" | relative_url }}">
@@ -12,7 +14,12 @@
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ "/assets/css/ie9.css" | relative_url }}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ "/assets/css/ie8.css" | relative_url }}" /><![endif]-->
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
     <meta name="theme-color" content="#424242">
 </head>
+
